@@ -7,10 +7,7 @@ ENV MOZ_FAKE_NO_SANDBOX=0
 
 USER 0
 
-RUN yum -y install glibc-langpack-zh langpacks-zh_CN && \
+RUN yum -y install langpacks-en && \
     yum clean all
-RUN localectl set-locale LANG="zh_CN.UTF-8"
-
-ENV LC_ALL "zh_CN.UTF-8"
 
 EXPOSE 5901 6901
